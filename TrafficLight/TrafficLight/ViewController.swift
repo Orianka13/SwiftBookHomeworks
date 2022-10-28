@@ -9,9 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var redLight: UIView!
+    @IBOutlet var yellowLight: UIView!
+    @IBOutlet var greenLight: UIView!
+    @IBOutlet var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        nextButton.layer.cornerRadius = 10
+        
+        setupLights()
+    }
+    
+    private func setupLights(){
+        
     }
 
 
