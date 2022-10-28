@@ -27,18 +27,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D39-LI-Ags">
                                 <rect key="frame" x="139" y="120" width="150" height="150"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="qfY-EW-Jfd"/>
-                                    <constraint firstAttribute="width" constant="150" id="tOL-r7-qxr"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-mR-rVo">
-                                <rect key="frame" x="139" y="456" width="150" height="150"/>
+                                <rect key="frame" x="139" y="460" width="150" height="150"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="HMl-bs-PvI"/>
-                                    <constraint firstAttribute="width" constant="150" id="Yak-TE-HS7"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDv-uk-8qS">
                                 <rect key="frame" x="165.66666666666666" y="759" width="96.999999999999972" height="47.666666666666629"/>
@@ -54,19 +46,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8kN-jP-0jx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4WS-sj-pZ8"/>
+                            <constraint firstItem="D39-LI-Ags" firstAttribute="height" secondItem="8kN-jP-0jx" secondAttribute="height" id="8oH-vm-nUt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WDv-uk-8qS" secondAttribute="bottom" constant="85.5" id="D4y-lN-v5v"/>
                             <constraint firstItem="D39-LI-Ags" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lia-iQ-yub"/>
+                            <constraint firstItem="hbe-mR-rVo" firstAttribute="width" secondItem="8kN-jP-0jx" secondAttribute="width" id="PIE-ox-adc"/>
                             <constraint firstItem="D39-LI-Ags" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="bKA-XQ-XeX"/>
                             <constraint firstItem="WDv-uk-8qS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fKR-Nt-tJp"/>
-                            <constraint firstItem="hbe-mR-rVo" firstAttribute="top" secondItem="8kN-jP-0jx" secondAttribute="bottom" constant="16" id="jWu-eJ-eLP"/>
+                            <constraint firstItem="hbe-mR-rVo" firstAttribute="top" secondItem="8kN-jP-0jx" secondAttribute="bottom" constant="20" id="jWu-eJ-eLP"/>
                             <constraint firstItem="hbe-mR-rVo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nfV-n9-ak7"/>
+                            <constraint firstItem="D39-LI-Ags" firstAttribute="width" secondItem="8kN-jP-0jx" secondAttribute="width" id="obm-uU-vRH"/>
+                            <constraint firstItem="hbe-mR-rVo" firstAttribute="height" secondItem="8kN-jP-0jx" secondAttribute="height" id="pMF-AP-qTQ"/>
                             <constraint firstItem="8kN-jP-0jx" firstAttribute="top" secondItem="D39-LI-Ags" secondAttribute="bottom" constant="20" id="shz-7Z-7E1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLight" destination="hbe-mR-rVo" id="Qii-gE-BbP"/>
+                        <outlet property="heightConstraint" destination="YGw-Cq-99e" id="zWO-W5-apI"/>
                         <outlet property="nextButton" destination="WDv-uk-8qS" id="jwf-qc-RtC"/>
                         <outlet property="redLight" destination="D39-LI-Ags" id="c88-o6-1za"/>
+                        <outlet property="widthConstraint" destination="UnR-w3-GyT" id="DVl-UW-m7J"/>
                         <outlet property="yellowLight" destination="8kN-jP-0jx" id="J2G-fk-D26"/>
                     </connections>
                 </viewController>

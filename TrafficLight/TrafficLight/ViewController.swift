@@ -14,16 +14,26 @@ class ViewController: UIViewController {
     @IBOutlet var greenLight: UIView!
     @IBOutlet var nextButton: UIButton!
     
+    @IBOutlet var widthConstraint: NSLayoutConstraint!
+    @IBOutlet var heightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .black
+        
         nextButton.layer.cornerRadius = 10
         
-        setupLights()
-    }
-    
-    private func setupLights(){
+        widthConstraint.constant = UIScreen.main.bounds.width / 3
+        heightConstraint.constant = widthConstraint.constant
         
+        redLight.layer.cornerRadius = widthConstraint.constant / 2
+        yellowLight.layer.cornerRadius = redLight.layer.cornerRadius
+        greenLight.layer.cornerRadius = redLight.layer.cornerRadius
+        
+        redLight.alpha = 0.3
+        yellowLight.alpha = redLight.alpha
+        greenLight.alpha = redLight.alpha
     }
 
 
