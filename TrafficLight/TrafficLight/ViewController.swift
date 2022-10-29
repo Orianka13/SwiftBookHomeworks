@@ -44,7 +44,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeLight(_ sender: UIButton) {
-        nextButton.setTitle(" NEXT ", for: .normal)
+        if nextButton.titleLabel?.text == " START " {
+            nextButton.setTitle(" NEXT ", for: .normal)
+        }
+
         
         switch count {
         case 0:
