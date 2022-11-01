@@ -43,11 +43,10 @@ class ViewController: UIViewController {
         greenLight.alpha = redLight.alpha
     }
     
-    @IBAction func changeLight(_ sender: UIButton) {
+    @IBAction func changeLight() {
         if nextButton.titleLabel?.text == " START " {
             nextButton.setTitle(" NEXT ", for: .normal)
         }
-
         
         switch count {
         case 0:
