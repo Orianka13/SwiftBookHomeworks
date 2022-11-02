@@ -17,12 +17,34 @@ class ViewController: UIViewController {
     @IBOutlet var widthConstraint: NSLayoutConstraint!
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     
+    
     private var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
+    }
+        
+    @IBAction func changeLight() {
+        if nextButton.titleLabel?.text == " START " {
+            nextButton.setTitle(" NEXT ", for: .normal)
+        }
+        
+        switch count {
+        case 0:
+            greenLight.alpha = 0.3
+            redLight.alpha = 1
+            count += 1
+        case 1:
+            redLight.alpha = 0.3
+            yellowLight.alpha = 1
+            count += 1
+        default:
+            yellowLight.alpha = 0.3
+            greenLight.alpha = 1
+            count = 0
+        }
     }
     
     private func setupViews() {
@@ -42,29 +64,5 @@ class ViewController: UIViewController {
         yellowLight.alpha = redLight.alpha
         greenLight.alpha = redLight.alpha
     }
-    
-    @IBAction func changeLight() {
-        if nextButton.titleLabel?.text == " START " {
-            nextButton.setTitle(" NEXT ", for: .normal)
-        }
-        
-        switch count {
-        case 0:
-            greenLight.alpha = 0.3
-            redLight.alpha = 1
-            count += 1
-        case 1:
-            redLight.alpha = 0.3
-            yellowLight.alpha = 1
-            count += 1
-        case 2:
-            yellowLight.alpha = 0.3
-            greenLight.alpha = 1
-            count = 0
-        default:
-            break
-        }
-    }
-    
 }
 
