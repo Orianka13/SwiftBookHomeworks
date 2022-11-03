@@ -15,17 +15,17 @@ anyItems.map { print($0) }
 
 for item in anyItems {
     
-    if let fractionalNumber = item as? Double {
-        print("Дробь: \(fractionalNumber)")
+    if item is Double {
+        print("Дробь: \(item)")
         
-    } else if let integerNumber = item as? Int {
-        print("Целое число: \(integerNumber)")
+    } else if item is Int {
+        print("Целое число: \(item)")
         
-    } else if let stringItem = item as? String {
-        print("Строка: \(stringItem)")
+    } else if item is String {
+        print("Строка: \(item)")
         
-    } else if let booleanItem = item as? Bool {
-        print("Булево значение: \(booleanItem)")
+    } else if item is Bool {
+        print("Булево значение: \(item)")
     }
 }
 
@@ -53,16 +53,11 @@ func getSum() {
         } else if let integerNumber = value as? Int {
             total += Double(integerNumber)
 
-        } else if let _ = value as? String {
+        } else if value is String {
             total += 1
    
         } else if let booleanItem = value as? Bool {
-            if booleanItem {
-                total += 2
-
-            } else {
-                total -= 3
-            }
+            total += booleanItem ? 2 : -3
         }
     }
 }
@@ -87,10 +82,8 @@ func getUpdateSum() {
             total += Double(integerNumber)
       
         } else if let stringItem = value as? String {
-            if let number = Double(stringItem) {
-                total += number
-   
-            }
+            let number = Double(stringItem)
+            total += number ?? 0
         }
     }
 }
