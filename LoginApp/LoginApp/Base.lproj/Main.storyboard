@@ -32,23 +32,26 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="JEj-iP-OQe" kind="presentation" modalPresentationStyle="fullScreen" id="SSr-AP-1HI"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="Hc3-h9-BCB">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hc3-h9-BCB">
                                 <rect key="frame" x="48" y="458" width="318" height="28.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnr-UK-IpO">
-                                        <rect key="frame" x="0.0" y="0.0" width="132" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="154" height="28.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Forgot User name?">
+                                        <buttonConfiguration key="configuration" style="plain" title="Forgot User name?" titleAlignment="leading">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yc-Tx-YJC">
-                                        <rect key="frame" x="186" y="0.0" width="132" height="28.5"/>
+                                        <rect key="frame" x="164" y="0.0" width="154" height="28.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
+                                        <buttonConfiguration key="configuration" style="plain" title="Forgot Password?" titleAlignment="trailing">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
                                     </button>
@@ -71,10 +74,11 @@
                             <constraint firstItem="I0n-r8-oYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="u1O-zR-sLd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7fP-Ij-cFf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
+            <point key="canvasLocation" x="928.98550724637687" y="78.348214285714278"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="Oow-tC-TWK">
@@ -84,35 +88,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHr-ZT-R7R">
-                                <rect key="frame" x="116" y="202" width="182" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHr-ZT-R7R">
+                                <rect key="frame" x="50" y="202" width="314" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-hF-kIu">
-                                <rect key="frame" x="166" y="493" width="96" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J6A-Vc-TuE">
+                                <rect key="frame" x="127" y="289.5" width="160" height="116"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119" id="NfR-PE-LfG"/>
+                                    <constraint firstAttribute="width" constant="160" id="xMh-Ep-3jn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-hF-kIu">
+                                <rect key="frame" x="159" y="500" width="96" height="41"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                 </buttonConfiguration>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill.checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J6A-Vc-TuE">
-                                <rect key="frame" x="131" y="289.5" width="160" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JPf-kZ-k5Y"/>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JPf-kZ-k5Y" firstAttribute="trailing" secondItem="fHr-ZT-R7R" secondAttribute="trailing" constant="50" id="6wW-gW-FUr"/>
+                            <constraint firstItem="J6A-Vc-TuE" firstAttribute="centerX" secondItem="JPf-kZ-k5Y" secondAttribute="centerX" id="8RK-L3-wxi"/>
+                            <constraint firstItem="fHr-ZT-R7R" firstAttribute="top" secondItem="JPf-kZ-k5Y" secondAttribute="top" constant="158" id="HcS-SI-UbH"/>
+                            <constraint firstItem="3m2-hF-kIu" firstAttribute="top" secondItem="J6A-Vc-TuE" secondAttribute="bottom" constant="93" id="McB-yU-frf"/>
+                            <constraint firstItem="fHr-ZT-R7R" firstAttribute="leading" secondItem="JPf-kZ-k5Y" secondAttribute="leading" constant="50" id="grW-vT-Vma"/>
+                            <constraint firstItem="3m2-hF-kIu" firstAttribute="centerX" secondItem="JPf-kZ-k5Y" secondAttribute="centerX" id="j2N-vn-Aaz"/>
+                            <constraint firstItem="J6A-Vc-TuE" firstAttribute="top" secondItem="fHr-ZT-R7R" secondAttribute="bottom" constant="53" id="jwg-qe-nxl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Cd3-tK-6bp">
+                        <barButtonItem key="backBarButtonItem" title=" " id="G7o-fm-avs"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLB-ee-Cfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763.768115942029" y="77.678571428571431"/>
+            <point key="canvasLocation" x="1673.913043478261" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
